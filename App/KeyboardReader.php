@@ -2,10 +2,12 @@
 
 namespace App;
 
-class KeyboardReader
+class KeyboardReader implements KeyboardReaderInterface
 {
+    public $data;
+
     public function read()
     {
-        return 'Read';
+        return $this->data;
     }
 }

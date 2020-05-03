@@ -2,7 +2,7 @@
 
 namespace App;
 
-class ConsoleOutput
+class ConsoleOutput implements ConsoleOutputInterface
 {
     public function output($data)
     {

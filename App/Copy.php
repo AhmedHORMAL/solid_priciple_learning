@@ -6,15 +6,13 @@ class Copy
 {
     private $data;
 
-    public function read(): void
+    public function read(KeyboardReaderInterface $reader): void
     {
-        $reader = new KeyboardReader();
         $this->data = $reader->read();
     }
 
-    public function output()
+    public function output(ConsoleOutputInterface $console)
     {
-        $console = new ConsoleOutput();
         $console->output($this->data);
     }
 }
