@@ -39,13 +39,4 @@ class Book
     {
         return $this->page;
     }
-
-    /**
-     * Dataを保存する
-     */
-    public function save()
-    {
-        $file = '/document' . $this->getTitle() . '_' . $this->getAuthor();
-        file_put_contents($file, serialize($this));
-    }
 }
