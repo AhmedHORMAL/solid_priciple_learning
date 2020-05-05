@@ -41,12 +41,11 @@ class Book
     }
 
     /**
-     * @param $page
-     * @return string
+     * Dataを保存する
      */
-    function printCurrentPage($page)
+    public function save()
     {
-        $this->current_page = $page;
-        echo $this->current_page;
+        $file = '/document' . $this->getTitle() . '_' . $this->getAuthor();
+        file_put_contents($file, serialize($this));
     }
 }
