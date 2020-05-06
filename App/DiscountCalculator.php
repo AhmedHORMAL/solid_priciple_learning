@@ -18,6 +18,8 @@ class DiscountCalculator
             $discount = $this->getDiscountPrice(0.5, $itemPrice, $unitTotal);
         } elseif ($itemType instanceof Bra) {
             $discount = $this->getDiscountPrice(0.2, $itemPrice, $unitTotal);
+        } elseif ($itemType instanceof Pansuto) {
+            $discount = $this->getDiscountPrice(0.1, $itemPrice, $unitTotal);
         }
 
         return $discount;
