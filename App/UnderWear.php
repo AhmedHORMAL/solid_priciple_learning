@@ -2,7 +2,17 @@
 
 namespace App;
 
-class UnderWear
+class UnderWear implements ItemInterface
 {
-    public $size;
+    private $discountValue;
+
+    public function setDiscountValue($discountValue)
+    {
+        $this->discountValue = $discountValue;
+    }
+
+    public function getDiscountValue()
+    {
+        return $this->discountValue;
+    }
 }
